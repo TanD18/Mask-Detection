@@ -8,7 +8,7 @@ from torchvision import transforms
 
 
 
-model=torch.load('resnet model II')
+model=torch.load('model_cpu')
 model.eval()
 
 st.write("# Wear your Mask....The Correct Way!")
