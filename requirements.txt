@@ -1,7 +1,7 @@
 numpy>=1.9.2
 Pillow=>9.2.0
 opencv-python-headless
-torch
-torchvision
+torch==1.8.1+cpu 
+torchvision==0.9.1+cpu
 pandas>=0.19
 streamlit
