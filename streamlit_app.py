@@ -22,7 +22,7 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
-model=torch.load('model_cpu_2')
+model=torch.load('model_cpu_4')
 model.eval()
 
 st.write("# Wear your Mask....The Correct Way!")
