@@ -36,10 +36,14 @@ if submit:
         output=model(batch_img)
         value,pred=torch.max(output.data,1)
         pred=pred.item()
-        if (pred==0):
-            cls='Incorrectly Worn'
-        elif (pred==1):
-            cls='Mask Worn Correctly'
-        elif (pred==2):
-            cls='No Mask'
-        st.write(cls)
+        mask_worn='NO'
+        correctly_worn='NO'
+        if (pred<2):
+            mask_worn='YES'
+            if(pred==1):
+                correctly_worn='YES'
+        
+        st.image(img.resize((256,256) , Image.ANTIALIAS))
+        st.write("MASK WORN: ",mask_worn)
+        if(mask_worn=='YES'):
+            st.write("IS IT WORN CORRECTLY: ",correctly_worn)
