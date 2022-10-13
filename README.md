@@ -3,4 +3,4 @@
 ##App Demo
 
 
-![Mask Detection](https://mask-on-detection.herokuapp.com/)
+[Mask Detection](https://mask-on-detection.herokuapp.com/)
