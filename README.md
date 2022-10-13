@@ -1,6 +1,6 @@
 # Face Mask Detection
 
-##App Demo
+## App Demo
 
 
 [Mask Detection](https://mask-on-detection.herokuapp.com/)
