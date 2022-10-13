@@ -6,9 +6,23 @@ import cv2
 from PIL import Image
 from torchvision import transforms
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYnBhZ2UlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
+add_bg_from_url() 
 
-model=torch.load('model_cpu')
+model=torch.load('model_cpu_2')
 model.eval()
 
 st.write("# Wear your Mask....The Correct Way!")
@@ -36,10 +50,14 @@ if submit:
         output=model(batch_img)
         value,pred=torch.max(output.data,1)
         pred=pred.item()
-        if (pred==0):
-            cls='Incorrectly Worn'
-        elif (pred==1):
-            cls='Mask Worn Correctly'
-        elif (pred==2):
-            cls='No Mask'
-        st.write(cls)
+        mask_worn='NO'
+        correctly_worn='NO'
+        if (pred<2):
+            mask_worn='YES'
+            if(pred==1):
+                correctly_worn='YES'
+        
+        st.image(img.resize((256,256) , Image.ANTIALIAS))
+        st.write("MASK WORN: ",mask_worn)
+        if(mask_worn=='YES'):
+            st.write("IS IT WORN CORRECTLY: ",correctly_worn)
