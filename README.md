@@ -51,12 +51,12 @@ Deploy:
 
 ## Tech stack
 
--OpenCV
+- OpenCV
 
--Pandas
+- Pandas
 
--Pytorch
+- Pytorch
 
--Streamlit
+- Streamlit
 
--Heroku
+- Heroku
