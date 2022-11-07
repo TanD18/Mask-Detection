@@ -5,7 +5,7 @@
 
 ## Problem Description
 
-Detect from an image of a person, if mask is worn or not. If mask is worn, is worn partially or fully.
+Detect from an image of a person, if mask is worn or not. If mask is worn, is it worn partially or fully.
 
 
 
