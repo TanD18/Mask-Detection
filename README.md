@@ -49,3 +49,14 @@ Deploy:
 
 [Demo](https://mask-on-detection.herokuapp.com/)
 
+## Tech stack
+
+-OpenCV
+
+-Pandas
+
+-Pytorch
+
+-Streamlit
+
+-Heroku
