@@ -39,7 +39,7 @@ Network Design and Training:
 
 Build App:
 
-Use Streamlit to develop app for the model prediction
+- Use Streamlit to develop app for the model prediction
 
 Deploy:
 
