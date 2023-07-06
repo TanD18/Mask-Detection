@@ -1,6 +1,6 @@
 # Face Mask Detection
 
-## App Demo - [Mask Detection](https://mask-on-detection.herokuapp.com/)
+## App Demo - [Mask Detection](http://54.164.48.70:8501/)
 
 
 ## Problem Description
@@ -47,7 +47,7 @@ Deploy:
 
 - Pass the repository link to the Heroku for Deployment
 
-[Demo](https://mask-on-detection.herokuapp.com/)
+[Demo](http://54.164.48.70:8501/)
 
 ## Tech stack
 
