@@ -54,8 +54,8 @@ if submit:
         correctly_worn='NO'
         if (pred<2):
             mask_worn='YES'
-            if(pred==1):
-                correctly_worn='YES'
+            # if(pred==1):
+            #     correctly_worn='YES'
         
         st.image(img.resize((256,256) , Image.ANTIALIAS))
         st.write("MASK WORN: ",mask_worn)
